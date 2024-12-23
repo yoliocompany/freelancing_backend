@@ -19,8 +19,9 @@ app.use('/users', userRoutes);
 app.use('/services', serviceRoutes);
 app.use('/proposals', proposalRoutes);
 
-app.use('/image' , express.static('./public'));
+app.use('/image', express.static('./public'));
 
+app.get('/', (req, res) => { res.send('server work') })
 
 // Server
 const PORT = 5000;
